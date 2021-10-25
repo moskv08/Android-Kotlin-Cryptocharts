@@ -2,8 +2,6 @@ package com.plcoding.cryptocurrencyappyt.data.repository
 
 import com.plcoding.cryptocurrencyappyt.common.Resource
 import com.plcoding.cryptocurrencyappyt.data.remote.CoinPaprikaApi
-import com.plcoding.cryptocurrencyappyt.data.remote.dto.CoinDetailDto
-import com.plcoding.cryptocurrencyappyt.data.remote.dto.CoinDto
 import com.plcoding.cryptocurrencyappyt.data.remote.dto.toCoin
 import com.plcoding.cryptocurrencyappyt.data.remote.dto.toCoinDetail
 import com.plcoding.cryptocurrencyappyt.domain.model.Coin
@@ -16,7 +14,7 @@ import java.io.IOException
 import javax.inject.Inject
 
 // Implementation of the CoinRepository
-class CoinRepository @Inject constructor(var api: CoinPaprikaApi) : CoinRepository{
+class CoinRepository @Inject constructor(private var api: CoinPaprikaApi) : CoinRepository{
 
     override suspend fun getCoins(): Flow<Resource<List<Coin>>> = flow {
         try {
