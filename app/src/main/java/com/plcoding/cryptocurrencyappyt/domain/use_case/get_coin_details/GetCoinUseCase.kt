@@ -10,6 +10,7 @@ import retrofit2.HttpException
 import java.io.IOException
 import javax.inject.Inject
 
+// TODO: The use case class should only call the repo. Error handling should be done in the repo
 class GetCoinUseCase @Inject constructor(private val repository: CoinRepository){
     operator fun invoke(coinId: String): Flow<Resource<CoinDetail>> = flow {
         try {
