@@ -11,5 +11,5 @@ interface CoinRepository {
     fun getCoins(): Flow<Resource<List<Coin>>>
 
     // API call to return a single coin by its id
-    suspend fun getCoinById(coinId: String): CoinDetail
+    fun getCoinById(coinId: String): Flow<Resource<CoinDetail>>
 }

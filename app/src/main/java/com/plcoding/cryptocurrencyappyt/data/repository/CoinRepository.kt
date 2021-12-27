@@ -16,10 +16,10 @@ import javax.inject.Inject
 // Implementation of the CoinRepository
 class CoinRepository @Inject constructor(private var api: CoinPaprikaApi) : CoinRepository{
 
-    override suspend fun getCoinById(coinId: String): CoinDetail {
+/*    override suspend fun getCoinById(coinId: String): CoinDetail {
         return api.getCoinById(coinId).toCoinDetail()
     }
-
+*/
     override fun getCoins(): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading<List<Coin>>())
@@ -31,4 +31,17 @@ class CoinRepository @Inject constructor(private var api: CoinPaprikaApi) : Coin
             emit(Resource.Error<List<Coin>>("Couldn't reach server. Check your internet connection."))
         }
     }
+
+    override fun getCoinById(coinId: String): Flow<Resource<CoinDetail>> = flow {
+        try {
+            emit(Resource.Loading())
+            val coin = api.getCoinById(coinId).toCoinDetail()
+            emit(Resource.Success(coin))
+        } catch(e: HttpException) {
+            emit(Resource.Error<CoinDetail>(e.localizedMessage ?: "An unexpected error occurred"))
+        } catch(e: IOException) {
+            emit(Resource.Error<CoinDetail>("Couldn't reach server. Check your internet connection."))
+        }
+    }
+
 }
