@@ -1,8 +1,8 @@
 package com.moskv08.cryptocurrencyapp.di
 
-import com.moskv08.cryptocurrencyapp.common.Constants
-import com.moskv08.cryptocurrencyapp.data.remote.CoinPaprikaApi
-import com.moskv08.cryptocurrencyapp.domain.repository.CoinRepository
+import com.moskv08.cryptocurrencyapp.core.Constants
+import com.moskv08.cryptocurrencyapp.feature_coin.data.remote.CoinPaprikaApi
+import com.moskv08.cryptocurrencyapp.feature_coin.domain.repository.CoinRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -29,6 +29,6 @@ object AppModule {
     @Provides
     @Singleton
     fun provideCoinRepository(api: CoinPaprikaApi): CoinRepository {
-        return com.moskv08.cryptocurrencyapp.data.repository.CoinRepository(api)
+        return com.moskv08.cryptocurrencyapp.feature_coin.data.repository.CoinRepository(api)
     }
 }

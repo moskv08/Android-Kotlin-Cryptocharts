@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptocurrencyApp">
         <activity
-            android:name="com.moskv08.cryptocurrencyapp.presentation.MainActivity"
+            android:name="com.moskv08.cryptocurrencyapp.feature_coin.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CryptocurrencyApp.NoActionBar">
