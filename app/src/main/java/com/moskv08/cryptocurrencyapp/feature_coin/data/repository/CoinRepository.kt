@@ -16,10 +16,6 @@ import javax.inject.Inject
 // Implementation of the CoinRepository
 class CoinRepository @Inject constructor(private var api: CoinPaprikaApi) : CoinRepository{
 
-/*    override suspend fun getCoinById(coinId: String): CoinDetail {
-        return api.getCoinById(coinId).toCoinDetail()
-    }
-*/
     override fun getCoins(): Flow<Resource<List<Coin>>> = flow {
         try {
             emit(Resource.Loading<List<Coin>>())
