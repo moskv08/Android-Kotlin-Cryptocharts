@@ -4,8 +4,10 @@ import com.moskv08.cryptocurrencyapp.core.Resource
 import com.moskv08.cryptocurrencyapp.feature_coin.data.remote.CoinPaprikaApi
 import com.moskv08.cryptocurrencyapp.feature_coin.data.remote.dto.toCoin
 import com.moskv08.cryptocurrencyapp.feature_coin.data.remote.dto.toCoinDetail
+import com.moskv08.cryptocurrencyapp.feature_coin.data.remote.dto.toCoinMarketCap
 import com.moskv08.cryptocurrencyapp.feature_coin.domain.model.Coin
 import com.moskv08.cryptocurrencyapp.feature_coin.domain.model.CoinDetail
+import com.moskv08.cryptocurrencyapp.feature_coin.domain.model.CoinMarketCap
 import com.moskv08.cryptocurrencyapp.feature_coin.domain.repository.CoinRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -15,6 +17,18 @@ import javax.inject.Inject
 
 // Implementation of the CoinRepository
 class CoinRepository @Inject constructor(private var api: CoinPaprikaApi) : CoinRepository{
+
+    override fun getCoinMarketCap(): Flow<Resource<CoinMarketCap>> = flow {
+        try {
+            emit(Resource.Loading())
+            val marketCap = api.getCoinMarketInfo().toCoinMarketCap()
+            emit(Resource.Success(marketCap))
+        } catch(e: HttpException) {
+            emit(Resource.Error<CoinMarketCap>(e.localizedMessage ?: "An unexpected error occurred"))
+        } catch(e: IOException) {
+            emit(Resource.Error<CoinMarketCap>("Couldn't reach server. Check your internet connection."))
+        }
+    }
 
     override fun getCoins(): Flow<Resource<List<Coin>>> = flow {
         try {

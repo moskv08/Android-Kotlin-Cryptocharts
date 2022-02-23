@@ -17,7 +17,7 @@ fun Navigation(navController: NavHostController) {
         composable(
             route = Screen.CoinHomeScreen.route
         ) {
-            CoinHomeScreen(navController)
+            CoinHomeScreen()
         }
         composable(
             route = Screen.CoinListScreen.route
