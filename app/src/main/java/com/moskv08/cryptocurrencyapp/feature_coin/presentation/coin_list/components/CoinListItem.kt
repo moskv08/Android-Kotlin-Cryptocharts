@@ -39,7 +39,9 @@ fun MyCoinListItemPreview() {
 fun CoinListItem(
     coin: Coin, onItemClick: (Coin) -> Unit
 ) {
-    Row(modifier = Modifier.padding(all = 8.dp)) {
+    Row(
+        modifier = Modifier.padding(all = 8.dp)
+    ) {
         Image(
             painter = painterResource(R.drawable.ic_launcher_background),
             contentDescription = "Contact profile picture",
