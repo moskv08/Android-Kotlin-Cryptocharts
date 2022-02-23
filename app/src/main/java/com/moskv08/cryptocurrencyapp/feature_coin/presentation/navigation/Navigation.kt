@@ -8,16 +8,15 @@ import com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_detail.CoinD
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home.CoinHomeScreen
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_list.CoinListScreen
 
-/** TODO: Move into separated class **/
 @Composable
 fun Navigation(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = Screen.CoinListScreen.route
+        startDestination = Screen.CoinHomeScreen.route
     ) {
         composable(
             route = Screen.CoinHomeScreen.route
-        ){
+        ) {
             CoinHomeScreen(navController)
         }
         composable(
@@ -25,22 +24,14 @@ fun Navigation(navController: NavHostController) {
         ) {
             CoinListScreen(navController)
         }
-
         composable(
             route = Screen.CoinDetailScreen.route + "/{coinId}"
         ) {
             CoinDetailScreen()
         }
         /** TODO: Implement Search section **/
-        /** TODO: Implement Search section **/
+        // composable(Screen.CoinSearchScreen.route) {
+        //  CoinSearchScreen()
+        //}
     }
-//    NavHost(navController = navController, startDestination = "home") {
-//        composable("home") {
-//            HomeScreen()
-//        }
-//        composable("coins") {
-//            ChatScreen()
-//        }
-//        /** TODO: Implement Search section **/
-//    }
 }
