@@ -1,23 +1,24 @@
-package com.moskv08.cryptocurrencyapp.feature_coin.presentation.theme
+package com.moskv08.cryptocurrencyapp.ui.theme
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.theme.Shapes
 
 private val DarkColorPalette = darkColors(
-    primary = ColorPrimary,
-    background = DarkGray,
+    primary = TextWhite,
+    background = DeepBlue,
     onBackground = TextWhite,
-    onPrimary = DarkGray
+    onPrimary = DeepBlue
 )
 
 private val LightColorPalette = lightColors(
-    primary = ColorPrimary,
+    primary = DeepBlue,
     background = Color.White,
-    onBackground = MediumGray,
-    onPrimary = DarkGray
+    onBackground = DeepBlue,
+    onPrimary = DeepBlue
 )
 
 @Composable

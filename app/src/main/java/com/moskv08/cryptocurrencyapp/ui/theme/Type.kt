@@ -1,4 +1,4 @@
-package com.moskv08.cryptocurrencyapp.feature_coin.presentation.theme
+package com.moskv08.cryptocurrencyapp.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
