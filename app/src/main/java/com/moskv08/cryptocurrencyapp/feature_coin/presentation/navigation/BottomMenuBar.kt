@@ -1,4 +1,4 @@
-package com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components
+package com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.*
@@ -11,14 +11,15 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components.BottomMenuBarItem
 
 @ExperimentalMaterialApi
 @Composable
-fun BottomNavigationBar(
-    items: List<BottomNavItem>,
+fun BottomMenuBar(
+    items: List<BottomMenuBarItem>,
     navController: NavController,
     modifier: Modifier = Modifier,
-    onItemClick: (BottomNavItem) -> Unit
+    onItemClick: (BottomMenuBarItem) -> Unit
 ) {
     val backStackEntry = navController.currentBackStackEntryAsState()
     BottomNavigation(

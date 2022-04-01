@@ -2,7 +2,7 @@ package com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.compo
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
-data class BottomNavItem(
+data class BottomMenuBarItem(
     val name: String,
     val route: String,
     val icon: ImageVector,

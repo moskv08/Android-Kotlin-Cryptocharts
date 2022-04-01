@@ -9,8 +9,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Notifications
 import androidx.navigation.compose.rememberNavController
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components.BottomNavItem
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components.BottomNavigationBar
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.BottomMenuBar
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components.BottomMenuBarItem
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.theme.CryptocurrencyAppTheme
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Navigation
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
@@ -26,20 +26,20 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
                 Scaffold(
                     bottomBar = {
-                        BottomNavigationBar(
+                        BottomMenuBar(
                             items = listOf(
-                                BottomNavItem(
+                                BottomMenuBarItem(
                                     name = "Home",
                                     route = Screen.CoinHomeScreen.route,
                                     icon = Icons.Default.Home
                                 ),
-                                BottomNavItem(
+                                BottomMenuBarItem(
                                     name = "List",
                                     route = Screen.CoinListScreen.route,
                                     icon = Icons.Default.Notifications,
                                     badgeCount = 300
                                 ),
-//                                BottomNavItem(
+//                                BottomMenuBarItem(
 //                                    name = "Search",
 //                                    route = "#",
 //                                    icon = Icons.Default.Search,
