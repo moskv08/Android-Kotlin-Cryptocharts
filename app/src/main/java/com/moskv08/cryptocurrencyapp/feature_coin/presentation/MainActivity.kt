@@ -6,12 +6,13 @@ import androidx.activity.compose.setContent
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.List
 import androidx.navigation.compose.rememberNavController
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.BottomMenuBar
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.navigation.components.BottomMenuBarItem
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.theme.CryptocurrencyAppTheme
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.BottomMenuBar
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.components.BottomMenuBarItem
+import com.moskv08.cryptocurrencyapp.ui.theme.CryptocurrencyAppTheme
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Navigation
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
 import dagger.hilt.android.AndroidEntryPoint
@@ -23,6 +24,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CryptocurrencyAppTheme {
+
                 val navController = rememberNavController()
                 Scaffold(
                     bottomBar = {
@@ -36,14 +38,14 @@ class MainActivity : ComponentActivity() {
                                 BottomMenuBarItem(
                                     name = "List",
                                     route = Screen.CoinListScreen.route,
-                                    icon = Icons.Default.Notifications,
-                                    badgeCount = 300
+                                    icon = Icons.Default.List,
+                                    // badgeCount = 300
                                 ),
-//                                BottomMenuBarItem(
-//                                    name = "Search",
-//                                    route = "#",
-//                                    icon = Icons.Default.Search,
-//                                ),
+                                BottomMenuBarItem(
+                                    name = "Favorites",
+                                    route = "#",
+                                    icon = Icons.Default.Favorite,
+                                ),
                             ),
                             navController = navController,
                             onItemClick = {
