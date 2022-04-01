@@ -5,6 +5,10 @@
       <map>
         <entry key="../../../../layout/compose-model-1645601694834.xml" value="0.18" />
         <entry key="../../../../layout/compose-model-1645602767002.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable/ic_bubble.xml" value="0.129" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_play.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_search.xml" value="0.129" />
       </map>
     </option>
   </component>
