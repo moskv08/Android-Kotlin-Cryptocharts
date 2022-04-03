@@ -33,9 +33,9 @@ fun CoinHomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
 
         ) {
-            GreetingSection(name = "Fabrizio")
-            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
-            CurrentMeditation()
+            GreetingSection()
+//            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
+//            CurrentMeditation()
             FeatureSection(
                 features = listOf(
                     Feature(
@@ -69,16 +69,16 @@ fun CoinHomeScreen(
                     Feature(
                         title = "Thug island",
                         R.drawable.ic_play,
-                        OrangeYellow1,
-                        OrangeYellow2,
-                        OrangeYellow3
+                        LightGreen1,
+                        LightGreen2,
+                        LightGreen3
                     ),
                     Feature(
                         title = "Life sounds",
                         R.drawable.ic_play,
-                        Beige1,
-                        Beige2,
-                        Beige3
+                        BlueViolet1,
+                        BlueViolet2,
+                        BlueViolet3
                     )
                 )
             )

@@ -24,7 +24,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             CryptocurrencyAppTheme {
-
                 val navController = rememberNavController()
                 Scaffold(
                     bottomBar = {

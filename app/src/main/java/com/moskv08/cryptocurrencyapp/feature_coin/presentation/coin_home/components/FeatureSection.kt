@@ -31,11 +31,6 @@ import kotlin.math.abs
 @Composable
 fun FeatureSection(features: List<Feature>) {
     Column(modifier = Modifier.fillMaxWidth()) {
-        Text(
-            text = "Features",
-            style = MaterialTheme.typography.h1,
-            modifier = Modifier.padding(15.dp)
-        )
         LazyVerticalGrid(
             cells = GridCells.Fixed(2),
             contentPadding = PaddingValues(start = 7.5.dp, end = 7.5.dp, bottom = 100.dp),
