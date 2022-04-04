@@ -45,6 +45,7 @@ fun FeatureSection(features: List<Feature>) {
 
 data class Feature(
     val title: String,
+    val content: String? = null,
     @DrawableRes val iconId: Int,
     val lightColor: Color,
     val mediumColor: Color,
@@ -133,26 +134,29 @@ fun FeatureItem(
                 lineHeight = 26.sp,
                 modifier = Modifier.align(Alignment.TopStart)
             )
-            Icon(
-                painter = painterResource(id = feature.iconId),
-                contentDescription = feature.title,
-                tint = Color.White,
-                modifier = Modifier.align(Alignment.BottomStart)
-            )
             Text(
-                text = "Start",
-                color = TextWhite,
-                fontSize = 14.sp,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier
-                    .clickable {
-                        // Handle the click
-                    }
-                    .align(Alignment.BottomEnd)
-                    .clip(RoundedCornerShape(10.dp))
-                    .background(ButtonBlue)
-                    .padding(vertical = 6.dp, horizontal = 15.dp)
+                text = feature.content.toString(),
+                style = MaterialTheme.typography.h3,
+                lineHeight = 26.sp,
+                modifier = Modifier.align(Alignment.Center)
             )
+//            Icon(
+//                painter = painterResource(id = feature.iconId),
+//                contentDescription = feature.title,
+//                tint = Color.White,
+//                modifier = Modifier.align(Alignment.BottomStart)
+//            )
+//            Text(
+//                text = "Start",
+//                color = TextWhite,
+//                fontSize = 14.sp,
+//                fontWeight = FontWeight.Bold,
+//                modifier = Modifier
+//                    .align(Alignment.BottomEnd)
+//                    .clip(RoundedCornerShape(10.dp))
+//                    .background(ButtonBlue)
+//                    .padding(vertical = 6.dp, horizontal = 15.dp)
+//            )
         }
     }
 }

@@ -1,6 +1,5 @@
-package com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home.components
+package com.moskv08.cryptocurrencyapp.feature_coin.presentation.top_header
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon
 import androidx.compose.material.MaterialTheme

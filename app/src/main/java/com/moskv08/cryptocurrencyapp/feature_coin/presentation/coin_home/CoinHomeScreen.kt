@@ -15,6 +15,7 @@ import androidx.navigation.NavController
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home.components.*
 import com.moskv08.cryptocurrencyapp.ui.theme.*
 import com.moskv08.cryptocurrencyapp.R
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.top_header.TopHeaderBar
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
@@ -33,13 +34,14 @@ fun CoinHomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally
 
         ) {
-            GreetingSection()
+            TopHeaderBar()
 //            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
 //            CurrentMeditation()
             FeatureSection(
                 features = listOf(
                     Feature(
-                        title = "Sleep meditation",
+                        title = "Last Updated",
+                        content = state.marketCap?.lastUpdated.toString(),
                         R.drawable.ic_play,
                         BlueViolet1,
                         BlueViolet2,
@@ -47,6 +49,7 @@ fun CoinHomeScreen(
                     ),
                     Feature(
                         title = "Tips for sleeping",
+                        content = null,
                         R.drawable.ic_play,
                         LightGreen1,
                         LightGreen2,
@@ -54,6 +57,7 @@ fun CoinHomeScreen(
                     ),
                     Feature(
                         title = "Night island",
+                        content = null,
                         R.drawable.ic_play,
                         OrangeYellow1,
                         OrangeYellow2,
@@ -61,6 +65,7 @@ fun CoinHomeScreen(
                     ),
                     Feature(
                         title = "Calming sounds",
+                        content = null,
                         R.drawable.ic_play,
                         Beige1,
                         Beige2,
@@ -68,6 +73,7 @@ fun CoinHomeScreen(
                     ),
                     Feature(
                         title = "Thug island",
+                        content = null,
                         R.drawable.ic_play,
                         LightGreen1,
                         LightGreen2,
@@ -75,6 +81,7 @@ fun CoinHomeScreen(
                     ),
                     Feature(
                         title = "Life sounds",
+                        content = null,
                         R.drawable.ic_play,
                         BlueViolet1,
                         BlueViolet2,
