@@ -15,27 +15,28 @@ import androidx.compose.ui.unit.dp
 import com.moskv08.cryptocurrencyapp.R
 
 @Composable
-fun GreetingSection() {
+fun TopHeaderBar() {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
             .padding(15.dp)
+            .height(50.dp)
     ) {
         Column(
             verticalArrangement = Arrangement.Center,
         ) {
             Text(
                 text = stringResource(id = R.string.app_name),
-                style = MaterialTheme.typography.h2
+                style = MaterialTheme.typography.h1
             )
         }
-//        Icon(
-//            painter = painterResource(id = R.drawable.ic_play),
-//            contentDescription = "Search",
-//            tint = Color.White,
-//            modifier = Modifier.size(24.dp)
-//        )
+        Icon(
+            painter = painterResource(id = R.drawable.ic_play),
+            contentDescription = "Logo",
+            tint = Color.White,
+            modifier = Modifier.size(24.dp)
+        )
     }
 }
