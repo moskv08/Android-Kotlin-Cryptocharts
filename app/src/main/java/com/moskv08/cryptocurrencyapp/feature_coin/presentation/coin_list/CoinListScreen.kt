@@ -16,8 +16,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_list.components.CoinListItem
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
 
 @Composable
 fun CoinListScreen(

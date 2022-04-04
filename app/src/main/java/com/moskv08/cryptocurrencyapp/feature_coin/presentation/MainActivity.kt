@@ -12,9 +12,9 @@ import androidx.compose.material.icons.filled.List
 import androidx.navigation.compose.rememberNavController
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.BottomMenuBar
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.components.BottomMenuBarItem
-import com.moskv08.cryptocurrencyapp.ui.theme.CryptocurrencyAppTheme
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Navigation
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
+import com.moskv08.cryptocurrencyapp.ui.theme.CryptocurrencyAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

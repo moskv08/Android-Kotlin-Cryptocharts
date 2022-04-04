@@ -14,10 +14,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.moskv08.cryptocurrencyapp.R
 import com.moskv08.cryptocurrencyapp.ui.theme.ButtonBlue
 import com.moskv08.cryptocurrencyapp.ui.theme.LightRed
 import com.moskv08.cryptocurrencyapp.ui.theme.TextWhite
-import com.moskv08.cryptocurrencyapp.R
 
 @Composable
 fun CurrentMeditation(

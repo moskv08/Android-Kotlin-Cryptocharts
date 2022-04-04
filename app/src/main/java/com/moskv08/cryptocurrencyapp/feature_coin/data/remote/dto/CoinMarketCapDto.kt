@@ -5,11 +5,9 @@ import androidx.annotation.RequiresApi
 import com.google.gson.annotations.SerializedName
 import com.moskv08.cryptocurrencyapp.feature_coin.domain.model.CoinMarketCap
 import java.time.Instant
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
-import java.util.*
 
 data class CoinMarketCapDto(
     val bitcoin_dominance_percentage: Double,
