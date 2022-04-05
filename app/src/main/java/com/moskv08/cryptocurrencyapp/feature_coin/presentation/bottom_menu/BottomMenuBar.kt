@@ -39,7 +39,7 @@ fun BottomMenuBar(
                 unselectedContentColor = TextWhite,
                 icon = {
                     Column(horizontalAlignment = CenterHorizontally) {
-                        if(item.badgeCount > 0) {
+                        if (item.badgeCount > 0) {
                             BadgeBox(
                                 badgeContent = {
                                     Text(text = item.badgeCount.toString())
@@ -56,13 +56,11 @@ fun BottomMenuBar(
                                 contentDescription = item.name
                             )
                         }
-                        if(selected) {
-                            Text(
-                                text = item.name,
-                                textAlign = TextAlign.Center,
-                                fontSize = 10.sp
-                            )
-                        }
+                        Text(
+                            text = item.name,
+                            textAlign = TextAlign.Center,
+                            fontSize = 10.sp
+                        )
                     }
                 }
             )

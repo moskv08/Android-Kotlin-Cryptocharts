@@ -4,4 +4,5 @@ data class CoinMarketCap(
     val cryptocurrencies: Int,
     val lastUpdated: String,
     val marketCapUsd: Long,
+    val btcDominancePercentage: Double,
 )

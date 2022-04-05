@@ -42,7 +42,7 @@ class MainActivity : ComponentActivity() {
                                 ),
                                 BottomMenuBarItem(
                                     name = "Favorites",
-                                    route = "#",
+                                    route = Screen.CoinHomeScreen.route,
                                     icon = Icons.Default.Favorite,
                                 ),
                             ),

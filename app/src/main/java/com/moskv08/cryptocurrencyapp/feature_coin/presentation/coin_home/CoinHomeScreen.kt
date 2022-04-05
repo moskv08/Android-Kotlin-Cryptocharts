@@ -30,7 +30,6 @@ fun CoinHomeScreen(
         Column(
             modifier = Modifier.fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
-
         ) {
             TopHeaderBar()
 //            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
@@ -59,25 +58,11 @@ fun CoinHomeScreen(
                         OrangeYellow3
                     ),
                     Feature(
-                        title = "Calming sounds",
-                        content = null,
+                        title = "BTC Dominance",
+                        content = "${state.marketCap?.btcDominancePercentage.toString()} %",
                         Beige1,
                         Beige2,
                         Beige3
-                    ),
-                    Feature(
-                        title = "Thug island",
-                        content = null,
-                        LightGreen1,
-                        LightGreen2,
-                        LightGreen3
-                    ),
-                    Feature(
-                        title = "Life sounds",
-                        content = null,
-                        BlueViolet1,
-                        BlueViolet2,
-                        BlueViolet3
                     )
                 )
             )

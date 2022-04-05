@@ -10,7 +10,8 @@ import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
 data class CoinMarketCapDto(
-    val bitcoin_dominance_percentage: Double,
+    @SerializedName("bitcoin_dominance_percentage")
+    val btcDominancePercentage: Double,
     @SerializedName("cryptocurrencies_number")
     val cryptocurrencies: Int,
     @SerializedName("last_updated")
@@ -33,7 +34,8 @@ fun CoinMarketCapDto.toCoinMarketCap(): CoinMarketCap {
     return CoinMarketCap (
         cryptocurrencies = cryptocurrencies,
         lastUpdated = convertToDate(lastUpdated),
-        marketCapUsd = marketCapUsd
+        marketCapUsd = marketCapUsd,
+        btcDominancePercentage = btcDominancePercentage
     )
 }
 
