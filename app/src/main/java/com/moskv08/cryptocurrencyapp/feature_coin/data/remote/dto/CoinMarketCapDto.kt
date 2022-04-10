@@ -4,6 +4,7 @@ import android.os.Build
 import androidx.annotation.RequiresApi
 import com.google.gson.annotations.SerializedName
 import com.moskv08.cryptocurrencyapp.feature_coin.domain.model.CoinMarketCap
+import java.text.NumberFormat
 import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -34,7 +35,7 @@ fun CoinMarketCapDto.toCoinMarketCap(): CoinMarketCap {
     return CoinMarketCap (
         cryptocurrencies = cryptocurrencies,
         lastUpdated = convertToDate(lastUpdated),
-        marketCapUsd = marketCapUsd,
+        marketCapUsd = getCurrencyFormat(marketCapUsd),
         btcDominancePercentage = btcDominancePercentage
     )
 }
@@ -47,4 +48,13 @@ fun convertToDate(unixTime: Long): String {
     )
     val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd.MM.yyyy hh:mm:ss")
     return dateTime.format(formatter)
+}
+
+fun getCurrencyFormat(number: Long): String {
+
+    val numberFormat = NumberFormat.getCurrencyInstance()
+    numberFormat.maximumFractionDigits = 0
+    var resultInBillion = (number / (1000000000))
+
+    return numberFormat.format(resultInBillion) + "B"
 }

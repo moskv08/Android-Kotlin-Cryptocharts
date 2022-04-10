@@ -2,10 +2,7 @@ package com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -29,7 +26,8 @@ fun CoinHomeScreen(
     ) {
         Column(
             modifier = Modifier.fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Bottom
         ) {
             TopHeaderBar()
 //            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
@@ -44,7 +42,7 @@ fun CoinHomeScreen(
                         BlueViolet3
                     ),
                     Feature(
-                        title = "Currencies",
+                        title = "Total Currencies",
                         content = state.marketCap?.cryptocurrencies.toString(),
                         LightGreen1,
                         LightGreen2,
