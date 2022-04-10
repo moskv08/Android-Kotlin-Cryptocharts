@@ -22,7 +22,6 @@ import com.moskv08.cryptocurrencyapp.ui.theme.DeepBlue
 import com.moskv08.cryptocurrencyapp.ui.theme.TextWhite
 import kotlin.math.abs
 
-
 @Composable
 fun FeatureItem(
     feature: Feature

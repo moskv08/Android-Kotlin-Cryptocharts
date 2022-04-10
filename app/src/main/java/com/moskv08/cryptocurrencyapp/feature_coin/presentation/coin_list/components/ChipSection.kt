@@ -1,4 +1,4 @@
-package com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home.components
+package com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_list.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

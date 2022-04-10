@@ -12,6 +12,7 @@ import androidx.compose.material.icons.filled.List
 import androidx.navigation.compose.rememberNavController
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.BottomMenuBar
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu.components.BottomMenuBarItem
+import com.moskv08.cryptocurrencyapp.feature_coin.presentation.top_header.TopHeaderBar
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Navigation
 import com.moskv08.cryptocurrencyapp.feature_coin.presentation.utli.Screen
 import com.moskv08.cryptocurrencyapp.ui.theme.CryptocurrencyAppTheme
@@ -26,6 +27,9 @@ class MainActivity : ComponentActivity() {
             CryptocurrencyAppTheme {
                 val navController = rememberNavController()
                 Scaffold(
+                    topBar = {
+                        TopHeaderBar()
+                    },
                     bottomBar = {
                         BottomMenuBar(
                             items = listOf(

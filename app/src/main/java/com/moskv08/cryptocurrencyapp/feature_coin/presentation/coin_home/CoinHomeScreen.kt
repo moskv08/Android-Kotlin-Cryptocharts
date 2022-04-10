@@ -29,9 +29,6 @@ fun CoinHomeScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
-            TopHeaderBar()
-//            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression"))
-//            CurrentMeditation()
             FeatureSection(
                 features = listOf(
                     Feature(
