@@ -1,6 +1,8 @@
 package com.moskv08.cryptocurrencyapp.feature_coin.presentation.bottom_menu
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
@@ -26,7 +28,7 @@ fun BottomMenuBar(
     val backStackEntry = navController.currentBackStackEntryAsState()
 
     BottomNavigation(
-        modifier = modifier,
+        modifier = modifier.height(80.dp),
         backgroundColor = DeepBlue,
         elevation = 5.dp
     ) {
@@ -52,6 +54,7 @@ fun BottomMenuBar(
                             }
                         } else {
                             Icon(
+                                modifier = modifier.size(27.dp),
                                 imageVector = item.icon,
                                 contentDescription = item.name
                             )
@@ -59,7 +62,7 @@ fun BottomMenuBar(
                         Text(
                             text = item.name,
                             textAlign = TextAlign.Center,
-                            fontSize = 10.sp
+                            fontSize = 15.sp
                         )
                     }
                 }

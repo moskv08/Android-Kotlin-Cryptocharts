@@ -2,7 +2,6 @@ package com.moskv08.cryptocurrencyapp.feature_coin.presentation.coin_home.compon
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
@@ -13,12 +12,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.moskv08.cryptocurrencyapp.ui.theme.ButtonBlue
-import com.moskv08.cryptocurrencyapp.ui.theme.DeepBlue
 import com.moskv08.cryptocurrencyapp.ui.theme.TextWhite
 import kotlin.math.abs
 
